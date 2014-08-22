@@ -47,11 +47,11 @@ Sample Report Screenshots
 --------------------------------------
 
 **Summary**
-![summary](https://raw.githubusercontent.com/sriki77/apigee-proxy-coverage/master/sample_summary.png)
+![summary](https://raw.githubusercontent.com/apigee/apigee-proxy-coverage/master/sample_summary.png)
 
 **Policy Execution Drilldown**
 
-![policy execution](https://raw.githubusercontent.com/sriki77/apigee-proxy-coverage/master/policy_exec.png)
+![policy execution](https://raw.githubusercontent.com/apigee/apigee-proxy-coverage/master/policy_exec.png)
 
 Coverage Numbers
 ----------------
@@ -87,6 +87,6 @@ The tool instruments a given proxy using the following approach.
 
 About
 --------
-The initial version is implemented by Srikanth Seshadri. [Interesting feedback](https://github.com/sriki77/apigee-proxy-coverage/issues?state=open) has been provided by the Apigee CS architects for enhancement. Please feel free to contribute.
+The initial version is implemented by Srikanth Seshadri. [Interesting feedback](https://github.com/apigee/apigee-proxy-coverage/issues?state=open) has been provided by the Apigee CS architects for enhancement. Please feel free to contribute.
 
 
