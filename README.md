@@ -47,11 +47,11 @@ Sample Report Screenshots
 --------------------------------------
 
 **Summary**
-![summary](https://raw.githubusercontent.com/sriki77/apigee-proxy-coverage/master/sample_summary.png)
+![summary](https://raw.githubusercontent.com/apigee/apigee-proxy-coverage/master/sample_summary.png)
 
 **Policy Execution Drilldown**
 
-![policy execution](https://raw.githubusercontent.com/sriki77/apigee-proxy-coverage/master/policy_exec.png)
+![policy execution](https://raw.githubusercontent.com/apigee/apigee-proxy-coverage/master/policy_exec.png)
 
 Coverage Numbers
 ----------------
