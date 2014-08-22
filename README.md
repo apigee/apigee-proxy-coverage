@@ -14,7 +14,7 @@ Usage
 
 **Pre-requisties**
 
-The [distribution](https://github.com/sriki77/apigee-proxy-coverage/tree/master/dist) provides shell scripts, a executable `Java 8` jar file and `python` scripts - which makes` bash, python, Java SE 8` as pre-requisites.
+The [distribution](https://github.com/apigee/apigee-proxy-coverage/releases) provides shell scripts, a executable `Java 8` jar file and `python` scripts - which makes` bash, python, Java SE 8` as pre-requisites.
 
 ---
 
