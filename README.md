@@ -14,11 +14,11 @@ Usage
 
 **Pre-requisties**
 
-*** Apigee Edge / OPDK ***
+***Apigee Edge / OPDK***
 
 The [distribution](./dist) provides shell scripts, a executable `Java 17` jar file and `python` scripts - which makes `bash, python, Java 17` as pre-requisites.
 
-*** Apigee X / Hybrid ***
+***Apigee X / Hybrid***
 
 The [distribution](./dist-for-apigee_x_hybrid) provides shell scripts, a executable `Java 17` jar file and scripts - which makes `bash, apigeecli, gcloud, curl, jq, Java 17` as pre-requisites.
 
