@@ -8,11 +8,11 @@ rm -fr "$INST_TXT"
 
 echo "Downloading Recorded Instrumented Data"
 
-curl -H "Authorization: Bearer $TOKEN" \
-	"https://apigee.googleapis.com/v1/organizations/$APIGEE_ORG/apis/${API_NAME}/keyvaluemaps/instrument/entries" \
+apigeecli kvms entries list --proxy "$API_NAME" --map instrument \
+	--org "$APIGEE_ORG" --token "$TOKEN" \
 	| jq 'with_entries(if .key == "keyValueEntries" then .key = "entry" else . end)' > $INST_TXT
 
 echo "Generating Coverage report"
-java -jar apc-1.0.jar -z "$API_NAME__$API_REVISION.zip" -kv "$INST_TXT" -o "$REPORT_DIR"
+java -jar apc-1.0.jar -z "${API_NAME}__${API_REVISION}.zip" -kv "$INST_TXT" -o "$REPORT_DIR"
 
-open $report_dir/summary.html&
+open $REPORT_DIR/summary.html&

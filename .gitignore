@@ -14,3 +14,4 @@ cov_report
 .project
 bin/
 config_vars2
+kvm_instrument.txt
