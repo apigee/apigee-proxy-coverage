@@ -52,6 +52,7 @@ export API_REVISION= #API revision
 #===========================================
 
 #Credentials
+gcloud config set project $APIGEE_ORG
 export TOKEN=$(gcloud auth print-access-token)
 
 #Report directory
