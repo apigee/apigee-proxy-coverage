@@ -1,9 +1,9 @@
 Apigee Proxy Coverage
 ==================
 
-This is a tool to determine test case coverage for [Apigee](www.apigee.com) proxies.
+This is a tool to determine test case coverage for [Apigee](https://cloud.google.com/apigee/docs/api-platform/get-started/what-apigee) proxies.
 
-Given a fully functional [API proxy](http://apigee.com/docs/), the tool produces an instrumented proxy file as output. The instrumented proxy file should be deployed to Apigee Edge against which the test cases should be run. Upon completion, the execution data is retrieved by the tool from Apigee Edge to produce the coverage report.
+Given a fully functional [API proxy](https://cloud.google.com/apigee/docs/), the tool produces an instrumented proxy file as output. The instrumented proxy file should be deployed to Apigee Edge against which the test cases should be run. Upon completion, the execution data is retrieved by the tool from Apigee Edge to produce the coverage report.
 
 The tool determines coverage of single API proxy under test.
 
