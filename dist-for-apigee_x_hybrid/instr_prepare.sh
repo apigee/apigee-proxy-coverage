@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#source ./config_vars
+source ./config_vars
 
 echo "Downloading API Bundle $api revision $rev"
 apigeecli apis fetch --name "$API_NAME" --rev "$API_REVISION" --org "$APIGEE_ORG" --token "$TOKEN"
