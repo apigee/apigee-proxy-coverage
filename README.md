@@ -14,7 +14,15 @@ Usage
 
 **Pre-requisties**
 
-The [distribution](https://github.com/apigee/apigee-proxy-coverage/releases) provides shell scripts, a executable `Java 8` jar file and `python` scripts - which makes` bash, python, Java SE 8` as pre-requisites.
+*** Apigee Edge / OPDK ***
+
+The [distribution](./dist) provides shell scripts, a executable `Java 17` jar file and `python` scripts - which makes `bash, python, Java 17` as pre-requisites.
+
+*** Apigee X / Hybrid ***
+
+The [distribution](./dist-for-apigee_x_hybrid) provides shell scripts, a executable `Java 17` jar file and scripts - which makes `bash, apigeecli, gcloud, curl, jq, Java 17` as pre-requisites.
+
+Pick the appropriate distribution and follow the steps below
 
 ---
 
@@ -35,7 +43,7 @@ The [distribution](https://github.com/apigee/apigee-proxy-coverage/releases) pro
 	+ Instrument the downloaded bundle.
 	+ Deploy the instrumented bundle into the `org` and activate it.
 	+ Delete any instrumented data recorded against the proxy in the org.
-3. Run the all tests against the deployed instrumented bundle. The instrument bundle has the same base path as the original bundle
+3. Run all the tests against the deployed instrumented bundle. The instrument bundle has the same base path as the original bundle
 4. Run `instr_report.sh` to obtain the coverage results. Following are the steps performed by this script.
 	+  Download the instrumented data recorded in the [Key Value map](http://apigee.com/docs/api-services/content/persist-data-using-keyvaluemap) in Apigee edge.
 	+  Generate the coverage report. The report has XML format - a `summary.xml` and one XML corresponding to every proxy and target endpoints are generated.
@@ -68,8 +76,9 @@ All proxy endpoints are expected to have **only one**
 +  `PostFlow` tag
 +  `FaultRules` tag
 	
-Apigee Edge allows multiple of the above tags, though the behaviour in certain cases is un-documented and not supported for instrumentation.
+Apigee allows multiple of the above tags, though the behaviour in certain cases is un-documented and not supported for instrumentation.
 
+The tool does not instrument the sharedflows that are called within the proxy
 	
 Internals
 ------------
@@ -85,8 +94,14 @@ The tool instruments a given proxy using the following approach.
 2.  The generated policies have random unique names to avoid conflict. They log the information into a Key Value Map named instrument at the api proxy level.  
 3.  After test execution, the tool uses the content of the key value map to reconstruct the execution information and calculate coverage.
 
-About
+Support
 --------
-The initial version is implemented by Srikanth Seshadri. [Interesting feedback](https://github.com/apigee/apigee-proxy-coverage/issues?state=open) has been provided by the Apigee CS architects for enhancement. Please feel free to contribute.
+Issues filed on Github are not subject to service level agreements (SLAs) and responses should be assumed to be on an ad-hoc volunteer basis. The [Apigee community board](https://community.apigee.com/) is recommended as for community support and is regularly checked by Apigee experts. Apigee customers should use [formal support channels](https://cloud.google.com/apigee/support for Apigee product related concerns.
 
+- Post a question in [Apigee community board](https://community.apigee.com/)
+- Create an [issue](https://github.com/apigee/apigee-proxy-coverage/issues/new). Please specify if its for Apigee X/hybrid or Apigee Edge/OPDK
+
+Disclaimer
+--------
+This is not an officially supported Google product.
 
