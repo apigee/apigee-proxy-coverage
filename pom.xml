@@ -90,6 +90,45 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<configuration>
+							<target>
+								<copy todir="./dist">
+									<fileset dir="${project.build.directory}">
+										<include
+											name="${project.artifactId}-${project.version}.jar" />
+										<!-- copy any required dependencies tht
+										are not
+		                    already included in the Edge runtime: -->
+
+										<!--                    -->
+									</fileset>
+									<mapper type="flatten" />
+								</copy>
+								<copy todir="./dist-for-apigee_x_hybrid">
+									<fileset dir="${project.build.directory}">
+										<include
+											name="${project.artifactId}-${project.version}.jar" />
+										<!-- copy any required dependencies tht
+										are not
+		                    already included in the Edge runtime: -->
+
+										<!--                    -->
+									</fileset>
+									<mapper type="flatten" />
+								</copy>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>

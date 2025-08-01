@@ -15,3 +15,4 @@ cov_report
 bin/
 config_vars2
 kvm_instrument.txt
+coverage
