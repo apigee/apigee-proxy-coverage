@@ -37,10 +37,16 @@ public class KVMapBasedProxyInstrumenter implements ProxyInstrumeter {
     }
 
     private void instrument(FlowSteps f, Endpoint e) {
-        new ArrayList<>(f.getSteps()).forEach(s -> instrument(f, s, e));
+        new ArrayList<>(f.getSteps()).forEach(s -> {
+			try {
+				instrument(f, s, e);
+			} catch (InterruptedException ie) {
+				ie.printStackTrace();
+			}
+		});
     }
 
-    private void instrument(FlowSteps f, Step s, Endpoint e) {
+    private void instrument(FlowSteps f, Step s, Endpoint e) throws InterruptedException {
         final Step step = f.cloneStep(s);
         try {
             String template = getStepTemplate();

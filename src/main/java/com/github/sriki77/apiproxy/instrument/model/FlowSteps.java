@@ -29,7 +29,7 @@ public abstract class FlowSteps implements NodeHolder, LocationProvider {
         return steps == null ? Collections.emptyList() : Collections.unmodifiableList(steps);
     }
 
-    public Step cloneStep(Step step) {
+    public Step cloneStep(Step step) throws InterruptedException {
         final int i = steps.indexOf(step);
         if (i == -1) {
             throw new RuntimeException("Step not found: " + step);

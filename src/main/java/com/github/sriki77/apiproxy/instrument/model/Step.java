@@ -50,8 +50,9 @@ public class Step implements LocationProvider {
     }
 
 
-    public Step duplicate() {
+    public Step duplicate() throws InterruptedException {
         final Step copy = new Step(name + System.currentTimeMillis(), condition, parent);
+        Thread.currentThread().sleep(100);
         copy.baseName = name;
         return copy;
     }
