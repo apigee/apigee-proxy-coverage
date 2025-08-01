@@ -13,3 +13,4 @@ cov_report
 .DS_Store
 .project
 bin/
+config_vars2
