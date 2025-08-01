@@ -2,7 +2,7 @@
 
 source ./config_vars
 
-echo "Downloading API Bundle $api revision $rev"
+echo "Downloading API Bundle $API_NAME revision $API_REVISION"
 apigeecli apis fetch --name "$API_NAME" --rev "$API_REVISION" --org "$APIGEE_ORG" --token "$TOKEN"
 
 echo "Instrumenting $API_NAME bundle"
