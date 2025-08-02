@@ -1,0 +1,60 @@
+#!/bin/bash
+
+# Pre-requisites - gcloud, apigeecli, curl and jq
+
+if command -v curl &> /dev/null; then
+    echo "cURL is installed."
+    curl --version
+else
+    echo "cURL is not installed or not found in PATH."
+    echo "Please install cURL from https://curl.se/download.html"
+    exit
+fi
+
+if command -v gcloud &> /dev/null; then
+    echo "gcloud CLI is installed."
+    gcloud version
+else
+    echo "gcloud CLI is not installed or not found in PATH."
+    echo "Please install Google Cloud SDK from https://cloud.google.com/sdk/docs/install"
+    exit
+fi
+
+if command -v jq &> /dev/null; then
+    echo "jq is installed."
+    jq --version
+else
+	echo "jq is not installed or not found in PATH."
+	echo "Please install jq from https://jqlang.org/download/"
+	exit
+fi
+
+if command -v apigeecli &> /dev/null; then
+    echo "apigeecli is installed."
+    apigeecli --version
+else
+    echo "Installing apigeecli"
+	curl -s https://raw.githubusercontent.com/apigee/apigeecli/main/downloadLatest.sh | bash
+	export PATH=$PATH:$HOME/.apigeecli/bin
+fi
+
+
+#===========================================
+# Edit this section only
+
+# Proxy Env Configuration
+
+export APIGEE_ORG= #Org name
+export APIGEE_ENV= # Env name
+export API_NAME= #API proxy name
+export API_REVISION= #API revision
+
+#===========================================
+
+#Credentials
+gcloud config set project $APIGEE_ORG
+export TOKEN=$(gcloud auth print-access-token)
+
+#Report directory
+export REPORT_DIR=coverage_report # report directory
+#===========================================

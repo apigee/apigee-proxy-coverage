@@ -54,17 +54,6 @@
                                             <a href="#top">Back to top</a>
                                         </li>
                                     </ul>
-                                    <p>Implemented by <a href="mailto:sriki77@gmail.com" rel="nofollow">Srikanth
-                                        Seshadri</a>.
-                                    </p>
-
-                                    <p>Code released under the <a
-                                            href="https://github.com/sriki77/apigee-proxy-coverage/blob/master/LICENSE">
-                                        MIT License</a>.
-                                        Based on <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a>.
-                                        Using <a href="http://bootswatch.com/readable/" rel="nofollow">Bootswatch
-                                            Readable Theme</a>.
-                                    </p>
                                 </div>
                             </div>
                         </div>

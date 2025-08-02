@@ -8,3 +8,11 @@ release.properties
 out
 profile_test*
 cov_report
+.settings
+.classpath
+.DS_Store
+.project
+bin/
+config_vars2
+kvm_instrument.txt
+coverage
