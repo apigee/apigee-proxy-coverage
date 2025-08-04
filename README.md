@@ -16,11 +16,11 @@ Usage
 
 ***Apigee Edge / OPDK***
 
-The [distribution](./dist) provides shell scripts, a executable `Java 17` jar file and `python` scripts - which makes `bash, python, Java 17` as pre-requisites.
+The [distribution](./dist/apigee_edge_opdk) provides shell scripts, a executable `Java 17` jar file and `python` scripts - which makes `bash, python, Java 17` as pre-requisites.
 
 ***Apigee X / Hybrid***
 
-The [distribution](./dist-for-apigee_x_hybrid) provides shell scripts, a executable `Java 17` jar file and scripts - which makes `bash, apigeecli, gcloud, curl, jq, Java 17` as pre-requisites.
+The [distribution](./dist/apigee_x_hybrid) provides shell scripts, a executable `Java 17` jar file and scripts - which makes `bash, apigeecli, gcloud, curl, jq, Java 17` as pre-requisites.
 
 Pick the appropriate distribution and follow the steps below
 
