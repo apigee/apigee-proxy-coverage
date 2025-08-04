@@ -97,7 +97,7 @@
 						<phase>package</phase>
 						<configuration>
 							<target>
-								<copy todir="./dist">
+								<copy todir="./dist/apigee_edge_opdk">
 									<fileset dir="${project.build.directory}">
 										<include
 											name="${project.artifactId}-${project.version}.jar" />
@@ -109,7 +109,7 @@
 									</fileset>
 									<mapper type="flatten" />
 								</copy>
-								<copy todir="./dist-for-apigee_x_hybrid">
+								<copy todir="./dist/apigee_x_hybrid">
 									<fileset dir="${project.build.directory}">
 										<include
 											name="${project.artifactId}-${project.version}.jar" />
