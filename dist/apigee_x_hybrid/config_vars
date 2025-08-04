@@ -44,10 +44,10 @@ fi
 
 # Proxy Env Configuration
 
-#export APIGEE_ORG= #Org name
-#export APIGEE_ENV= # Env name
-#export API_NAME= #API proxy name
-#export API_REVISION= #API revision
+export APIGEE_ORG= #Org name
+export APIGEE_ENV= # Env name
+export API_NAME= #API proxy name
+export API_REVISION= #API revision
 
 #===========================================
 
