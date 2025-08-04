@@ -12,6 +12,8 @@ Coverage in case of Apigee proxies is the percentage of policies executed with r
 Usage
 --------
 
+You can download the distribution using the following URL - https://github.com/apigee/apigee-proxy-coverage/releases/latest/download/apc.tar.gz
+
 **Pre-requisties**
 
 ***Apigee Edge / OPDK***
